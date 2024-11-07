@@ -1,0 +1,68 @@
+/* VARIABLES */
+:root {
+  /* COLORS */
+  --dark1-color: #111111;
+  --dark2-color: #555555;
+  --dark3-color: #777777;
+  --dark4-color: #999999;
+
+  --light1-color: #ffffff;
+  --light2-color: #eeeeee;
+  --light3-color: #cccccc;
+
+  --orange-color: #ff8139;
+  --pink-color: #ff3998;
+  --green-color: #39ffa0;
+  --red-color: #ff3939;
+
+  --light-green-color: #edfff6;
+  --light-orange-color: #fff0e8;
+}
+
+/* GLOBAL */
+*,
+*::before,
+*::after {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* REUSIBLE */
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.remove {
+  display: none;
+}
+
+/* HEADER */
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+
+header .logo {
+  width: 20rem;
+}
+
+/* font-awsome bug fix */
+header i:before {
+  font-family: "Font Awesome 6 Free";
+}
+
+header i {
+  font-size: 2.4rem;
+  color: var(--dark4-color);
+}
