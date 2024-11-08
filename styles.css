@@ -1,3 +1,9 @@
+/* BUG-FIXE */
+/* font-awsome bug fix */
+i:before {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+}
+
 /* VARIABLES */
 :root {
   /* COLORS */
@@ -20,7 +26,7 @@
 
   /* FONT-WEIGHTS */
   --w-light: 200;
-  --w-medium: 500;
+  --w-medium: 400;
   --w-bold: 700;
 }
 
@@ -59,6 +65,15 @@ p {
   font-size: 2rem;
   font-weight: var(--w-medium);
   color: var(--dark2-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark4-color);
+}
+
+ul {
+  list-style: none;
 }
 /* REUSIBLE */
 .flex-row {
@@ -124,10 +139,6 @@ p {
   cursor: pointer;
 }
 
-/* font-awsome bug fix */
-i:before {
-  font-family: "Font Awesome 6 Free";
-}
 /* HEADER */
 header {
   justify-content: space-between;
@@ -277,9 +288,51 @@ header i {
 /* FOOTER */
 footer {
   display: grid;
+  justify-content: start;
   grid-template-columns: 1fr 1fr;
+  row-gap: 6rem;
+  padding: 6rem 3rem;
+}
+
+footer .logo {
+  width: 20rem;
 }
 
 footer .date-message {
   display: none;
+}
+
+footer .all-socials {
+  grid-column: 1 / 3;
+  width: 24rem;
+  gap: 3rem;
+}
+
+footer .social-icons {
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  color: var(--dark4-color);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+  font-size: 2rem;
+  font-weight: var(--w-medium);
+  color: var(--dark2-color);
+}
+
+footer h3 {
+  font-size: 1.6rem;
+  font-weight: var(--w-bold);
+  color: var(--dark2-color);
+}
+
+.copyright {
+  grid-column: 1 / 3;
+  font-size: 2rem;
+  color: var(--dark4-color);
+  font-weight: var(--w-medium);
 }
