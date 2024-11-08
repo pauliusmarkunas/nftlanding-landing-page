@@ -65,6 +65,7 @@ p {
   font-size: 2rem;
   font-weight: var(--w-medium);
   color: var(--dark2-color);
+  line-height: 1.5;
 }
 
 a {
@@ -87,10 +88,6 @@ ul {
 
 .section-x-p {
   padding: 0 3rem;
-}
-
-.remove {
-  display: none;
 }
 
 .aside-text {
@@ -150,6 +147,10 @@ header .logo {
   width: 20rem;
 }
 
+header nav {
+  display: none;
+}
+
 header i {
   font-size: 2.4rem;
   color: var(--dark4-color);
@@ -157,7 +158,8 @@ header i {
 
 /* SECTION-HERO */
 .section-hero {
-  padding: 6rem 2.4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   position: relative;
   width: 100%;
 }
@@ -285,6 +287,10 @@ header i {
   width: 18rem;
 }
 
+.section-cta .text-container p::after {
+  content: "Don’t miss out on the release of our new NFT. Sign up below to receive updates.";
+}
+
 /* FOOTER */
 footer {
   display: grid;
@@ -330,9 +336,132 @@ footer h3 {
   color: var(--dark2-color);
 }
 
-.copyright {
-  grid-column: 1 / 3;
+.copyright,
+.date-message {
   font-size: 2rem;
   color: var(--dark4-color);
   font-weight: var(--w-medium);
+}
+
+.copyright {
+  grid-column: 1 / 3;
+}
+
+/* MEDIA QUERIES */
+@media screen AND (min-width: 1024px) {
+  /* general */
+  .section-x-p {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  /* HEADER */
+  header {
+    max-width: 1280px;
+    margin: 3rem auto;
+  }
+
+  header .fa-bars {
+    display: none;
+  }
+  header nav {
+    display: block;
+    font-size: 2rem;
+    ul {
+      gap: 2.8rem;
+      .cta-link {
+        color: var(--pink-color);
+      }
+    }
+  }
+
+  /* SECTION-HERO */
+  .section-hero {
+    overflow-y: 0;
+  }
+
+  .section-hero .text-container {
+    max-width: 64rem;
+    gap: 4.2rem;
+  }
+
+  .section-hero h1 {
+    font-size: 9.6rem;
+  }
+
+  .section-hero img {
+    position: static;
+    width: 64rem;
+    transform: translate(5rem, -5rem);
+  }
+
+  /* SECTION-MESSAGE-CTA */
+  .section-cta-message {
+    padding-left: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  /* SECTION-PRESS */
+  .section-press {
+    padding: 6rem 0;
+    justify-content: space-between;
+  }
+
+  .section-press img:nth-last-child(2) {
+    display: inline-block;
+  }
+  .section-press img {
+    width: auto;
+    height: 4.2rem;
+  }
+
+  /* SECTION-PRODUCTS */
+  .section-products {
+    padding: 6rem 0;
+  }
+
+  .products-container {
+    justify-content: space-between;
+    margin-top: 4.2rem;
+  }
+
+  .section-products .underline {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  /* SECTION-CTA */
+  .section-cta .text-container {
+    max-width: 55rem;
+    gap: 3rem;
+  }
+
+  .section-cta .text-container p::after {
+    content: "Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live.";
+  }
+
+  .section-cta img {
+    right: 15%;
+  }
+
+  /* FOOTER */
+  footer {
+    grid-template-columns: 50% repeat(4, 1fr);
+    padding: 6rem 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  footer .all-socials {
+    grid-column: 1 /2;
+  }
+
+  footer .copyright {
+    grid-column: 1 / 2;
+  }
+
+  footer .date-message {
+    display: block;
+    grid-column: 2 /-1;
+    justify-self: end;
+  }
 }
